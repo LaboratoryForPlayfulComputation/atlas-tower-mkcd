@@ -1,6 +1,6 @@
 {
-    "id": "sample",
-    "name": "sample",
+    "id": "atlas-tower",
+    "name": "ATLAS Light Tower",
     "title": "MakeCode Editor Sample",
     "corepkg": "core",
     "cloud": {
@@ -23,8 +23,8 @@
         "autoRun": true
     },
     "appTheme": {
-        "logoUrl": "https://github.com/Microsoft/pxt-sample",
-        "homeUrl": "http://microsoft.github.io/pxt-sample/",
+        "logoUrl": "https://github.com/LaboratoryForPlayfulComputation/atlas-tower-mkcd",
+        "homeUrl": "http://microsoft.github.io/atlas-tower-mkcd/",
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
         "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
         "betaUrl": "https://makecode.com/",

@@ -1,6 +1,6 @@
 {
     "name": "core",
-    "description": "A target sample for PXT",
+    "description": "A target for controlling lights on the ATLAS building",
     "files": [
         "README.md",
         "pxt-core.d.ts",

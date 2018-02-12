@@ -1,6 +1,6 @@
 /// <reference path="../libs/core/enums.d.ts"/>
 
-namespace pxsim.turtle {
+namespace pxsim.lights {
     /**
      * Moves the sprite forward
      * @param steps number of steps to move, eg: 1
@@ -27,18 +27,6 @@ namespace pxsim.turtle {
             b.sprite.angle += angle;
         return Promise.delay(400)
     }
-
-    /**
-     * Triggers when the turtle bumps a wall
-     * @param handler 
-     */
-    //% blockId=onBump block="on bump"
-    export function onBump(handler: RefAction) {
-        let b = board();
-
-        b.bus.listen("Turtle", "Bump", handler);
-    }
-}
 
 namespace pxsim.loops {
 
@@ -78,52 +66,11 @@ namespace pxsim.console {
 }
 
 namespace pxsim {
-    /**
-     * A ghost on the screen.
-     */
-    //%
-    export class Sprite {
-        /**
-         * The X-coordiante
-         */
-        //%
-        public x = 100;
-         /**
-         * The Y-coordiante
-         */
-        //%
-        public y = 100;
-        public angle = 90;
-        
-        constructor() {
-        }
-        
-        private foobar() {}
-
-        /**
-         * Move the thing forward
-         */
-        //%
-        public forwardAsync(steps: number) {
-            let deg = this.angle / 180 * Math.PI;
-            this.x += Math.cos(deg) * steps * 10;
-            this.y += Math.sin(deg) * steps * 10;
-            board().updateView();
-
-            if (this.x < 0 || this.y < 0)
-                board().bus.queue("TURTLE", "BUMP");
-
-            return Promise.delay(400)
-        }
-    }
+  
 }
 
 namespace pxsim.sprites {
-    /**
-     * Creates a new sprite
-     */
-    //% block
-    export function createSprite(): Sprite {
-        return new Sprite();
-    }
+
+}
+
 }

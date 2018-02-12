@@ -1,12 +1,12 @@
 // Auto-generated from simulator. Do not edit.
-declare namespace turtle {
+declare namespace lights {
     /**
      * Moves the sprite forward
      * @param steps number of steps to move, eg: 1
      */
     //% weight=90
     //% block
-    //% shim=turtle::forwardAsync promise
+    //% shim=lights::forwardAsync promise
     function forward(steps: number): void;
 
     /**
@@ -16,7 +16,7 @@ declare namespace turtle {
      */
     //% weight=85
     //% blockId=sampleTurn block="turn %direction|by %angle degrees"
-    //% shim=turtle::turnAsync promise
+    //% shim=lights::turnAsync promise
     function turn(direction: Direction, angle: number): void;
 
     /**
@@ -24,7 +24,7 @@ declare namespace turtle {
      * @param handler 
      */
     //% blockId=onBump block="on bump"
-    //% shim=turtle::onBump
+    //% shim=lights::onBump
     function onBump(handler: () => void): void;
 
 }
