@@ -31,15 +31,17 @@ declare namespace console {
 declare namespace lights {
     /**
      * Send key frame
-     * @param red Red value
-     * @param green Green value
-     * @param blue Blue value
+     * @param r Red value
+     * @param g Green value
+     * @param b Blue value
+     * @param duration Keyframe time in seconds
      */
-    //% blockId=send_keyframe block="send keyframe red %r| green %g| blue %b"
+    //% blockId=send_keyframe block="send keyframe red %r| green %g| blue %b| for %duration| ms"
     //% blockNamespace=lights inBasicCategory=true promise
+    //% inlineInputMode="inline"   
     //% weight=100
     //% shim=lights::sendKeyFrameAsync promise
-    function sendKeyFrame(r: number, g: number, b: number): void;
+    function sendKeyFrame(r: number, g: number, b: number, duration: number): void;
 
 }
 declare namespace messaging {
