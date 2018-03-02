@@ -1,15 +1,18 @@
 /**
- * Basic functionalities.
+ * Lights
  */
-//% color=#00BCD4 weight=100
-namespace turtle {
+//% color=#f44242 icon="\uf0eb" weight=100
+namespace lights {
 
 }
 
 /**
- * Control flow
+ * Messaging
  */
-//% color=#FF5722 weight=90
-namespace control {
+//% color=#6657b2 icon="\uf003" weight=99
+namespace messaging {
 
 }
+
+
+

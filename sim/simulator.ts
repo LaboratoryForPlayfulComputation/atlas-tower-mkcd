@@ -1,7 +1,10 @@
 /// <reference path="../node_modules/pxt-core/typings/globals/bluebird/index.d.ts"/>
 /// <reference path="../node_modules/pxt-core/built/pxtsim.d.ts"/>
+/// <reference path="../typings/globals/peerjs/index.d.ts" />
+/// <reference path="sound.d.ts" />
 
 namespace pxsim {
+
     /**
      * This function gets called each time the program restarts
      */
@@ -22,28 +25,21 @@ namespace pxsim {
      */
     export class Board extends pxsim.BaseBoard {
         public bus: EventBus;
-        public element : SVGSVGElement;
-        public spriteElement: SVGCircleElement;
-        public sprite : Sprite;
+        public canvas : HTMLCanvasElement;
+        public canvasContext : CanvasRenderingContext2D;
         
         constructor() {
             super();
-            this.bus = new EventBus(runtime);
-            this.element = <SVGSVGElement><any>document.getElementById('svgcanvas');
-            this.spriteElement = <SVGCircleElement>this.element.getElementById('svgsprite');
-            this.sprite = new Sprite()
+            this.canvas = document.getElementById("visualizer-canvas") as HTMLCanvasElement;
+            this.canvasContext = this.canvas.getContext("2d");
+            this.bus = new EventBus(runtime); 
+            
         }
         
         initAsync(msg: pxsim.SimulatorRunMessage): Promise<void> {
-            document.body.innerHTML = ''; // clear children
-            document.body.appendChild(this.element);
-
+            // reset sound stuff eventually       
             return Promise.resolve();
-        }       
-        
-        updateView() {
-            this.spriteElement.cx.baseVal.value = this.sprite.x;
-            this.spriteElement.cy.baseVal.value = this.sprite.y;
         }
+
     }
 }

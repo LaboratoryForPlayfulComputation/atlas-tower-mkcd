@@ -1,33 +1,4 @@
 // Auto-generated from simulator. Do not edit.
-declare namespace lights {
-    /**
-     * Moves the sprite forward
-     * @param steps number of steps to move, eg: 1
-     */
-    //% weight=90
-    //% block
-    //% shim=lights::forwardAsync promise
-    function forward(steps: number): void;
-
-    /**
-     * Moves the sprite forward
-     * @param direction the direction to turn, eg: Direction.Left
-     * @param angle degrees to turn, eg:90
-     */
-    //% weight=85
-    //% blockId=sampleTurn block="turn %direction|by %angle degrees"
-    //% shim=lights::turnAsync promise
-    function turn(direction: Direction, angle: number): void;
-
-    /**
-     * Triggers when the turtle bumps a wall
-     * @param handler 
-     */
-    //% blockId=onBump block="on bump"
-    //% shim=lights::onBump
-    function onBump(handler: () => void): void;
-
-}
 declare namespace loops {
     /**
      * Repeats the code forever in the background. On each iteration, allows other code to run.
@@ -57,40 +28,40 @@ declare namespace console {
     function log(msg: string): void;
 
 }
+declare namespace lights {
     /**
-     * A ghost on the screen.
+     * Send key frame
+     * @param red Red value
+     * @param green Green value
+     * @param blue Blue value
      */
-    //%
-    declare class Sprite {
-        /**
-         * The X-coordiante
-         */
-        //%
-        //% shim=.x
-        public x: number;
+    //% blockId=send_keyframe block="send keyframe red %r| green %g| blue %b"
+    //% blockNamespace=lights inBasicCategory=true promise
+    //% weight=100
+    //% shim=lights::sendKeyFrameAsync promise
+    function sendKeyFrame(r: number, g: number, b: number): void;
 
-        /**
-         * The Y-coordiante
-         */
-        //%
-        //% shim=.y
-        public y: number;
-
-        /**
-         * Move the thing forward
-         */
-        //%
-        //% shim=.forwardAsync promise
-        public forward(steps: number): void;
-
-    }
-declare namespace sprites {
+}
+declare namespace messaging {
     /**
-     * Creates a new sprite
+     * Peer
+     * @param id The value of the marker
      */
-    //% block
-    //% shim=sprites::createSprite
-    function createSprite(): Sprite;
+    //% blockId=peer_block block="send key %key| value %value| to %id"
+    //% blockNamespace=messaging inBasicCategory=true
+    //% weight=100
+    //% shim=messaging::send
+    function send(key: string, value: number, id: string): void;
+
+    /**
+     * Allows user to define callbacks for receive event
+     * @param key 
+     */
+    //% blockId=peer_receive block="when I receive key %key|do" blockGap=8
+    //% blockNamespace=messaging inBasicCategory=true
+    //% weight=99
+    //% shim=messaging::receive
+    function receive(key: string, handler: () => void): void;
 
 }
 

@@ -37,9 +37,50 @@
 @media only screen and (min-width: @largeMonitorBreakpoint) {
 }
 
-#editortools {
-    background: #1900ff;
-    background-image: data-uri('../docs/static/simback.png'), linear-gradient(302deg,#1900ff,#00bbff 50%,#00ff77);
+#simulators {
+    padding: 5px;
+}
+
+div.simframe {
+    overflow: hidden;
+    border-radius: 20px;
+    z-index: 100;
+    background: rgba(65, 119, 255, 0.5) !important;
+    box-shadow: 0 14px 40px 0 rgba(94, 96, 197, 0.25);
+}
+
+#simulator {
+    padding: 0px;
+}
+
+#filelist {
+    padding: 0px;
+    background: #ffffff;
+}
+
+#menubar .ui.menu.fixed .item.editor-menuitem .ui.grid {
+    background: #8a62ff !important;
+    border: 3px solid rgba(65, 119, 255, 0.5);
+}
+
+#editortools{
+    background-image: linear-gradient(to right, red, violet, blue)  !important;
+    background-image: linear-gradient(to right, red, violet, blue)  !important;
     background-position: 0 0;
     background-repeat: repeat;
+}
+
+#downloadArea {
+    background: transparent !important;
+}
+
+/* Full screen */
+.fullscreensim #boardview {
+    padding: 0;
+    padding-top: @mainMenuHeight;
+    height: calc(100% - @mainMenuHeight);
+}
+
+.fullscreensim #simulators {
+    padding: 0;
 }

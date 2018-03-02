@@ -1,7 +1,7 @@
 {
-    "id": "atlas-tower",
-    "name": "ATLAS Light Tower",
-    "title": "MakeCode Editor Sample",
+    "id": "ATLAS Tower Lights",
+    "name": "ATLAS Tower Lights",
+    "title": "ATLAS Tower Lights",
     "corepkg": "core",
     "cloud": {
         "workspace": false,
@@ -23,8 +23,8 @@
         "autoRun": true
     },
     "appTheme": {
-        "logoUrl": "https://github.com/LaboratoryForPlayfulComputation/atlas-tower-mkcd",
-        "homeUrl": "http://microsoft.github.io/atlas-tower-mkcd/",
+        "logoUrl": "https://laboratoryforplayfulcomputation.github.io/atlas-tower-mkcd/",
+        "homeUrl": "https://laboratoryforplayfulcomputation.github.io/atlas-tower-mkcd/",
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
         "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
         "betaUrl": "https://makecode.com/",
@@ -38,8 +38,10 @@
                 "path": "/docs"
             }
         ],
-        "coloredToolbox": true,
+        "coloredToolbox": false,
         "monacoToolbox": true,
+        "invertedToolbox": true,
+        "invertedMonaco": true,        
         "invertedMenu": true,
         "showHomeScreen": true,
         "homeScreenHero": "./static/hero.png",        
@@ -55,6 +57,17 @@
         "simAnimationExit": "fly right out",
         "monacoColors": {
             "editor.background": "#ecf0f1"
-        }
+        },
+        "blockColors": {
+            "loops": "#30ad14",
+            "logic": "#44abff",
+            "math": "#9844ff",
+            "variables": "#e944ff",
+            "text": "#ffb444",
+            "advanced": "#111111",
+            "functions": "#3399ff",
+            "arrays": "#b62fd1",
+            "messaging": "#6657b2"
+        }        
     }
 }

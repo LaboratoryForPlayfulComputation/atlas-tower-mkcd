@@ -1,33 +1,5 @@
 /// <reference path="../libs/core/enums.d.ts"/>
 
-namespace pxsim.lights {
-    /**
-     * Moves the sprite forward
-     * @param steps number of steps to move, eg: 1
-     */
-    //% weight=90
-    //% block
-    export function forwardAsync(steps: number) {
-        return board().sprite.forwardAsync(steps)
-    }
-
-    /**
-     * Moves the sprite forward
-     * @param direction the direction to turn, eg: Direction.Left
-     * @param angle degrees to turn, eg:90
-     */
-    //% weight=85
-    //% blockId=sampleTurn block="turn %direction|by %angle degrees"
-    export function turnAsync(direction: Direction, angle: number) {
-        let b = board();
-
-        if (direction == Direction.Left)
-            b.sprite.angle -= angle;
-        else
-            b.sprite.angle += angle;
-        return Promise.delay(400)
-    }
-
 namespace pxsim.loops {
 
     /**
@@ -65,12 +37,3 @@ namespace pxsim.console {
     }
 }
 
-namespace pxsim {
-  
-}
-
-namespace pxsim.sprites {
-
-}
-
-}
