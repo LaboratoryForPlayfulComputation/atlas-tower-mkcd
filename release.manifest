@@ -1,0 +1,60 @@
+CACHE MANIFEST
+
+CACHE:
+/atlas-tower-mkcd/semantic.js
+/atlas-tower-mkcd/main.js
+/atlas-tower-mkcd/typescript.js
+/atlas-tower-mkcd/marked/marked.min.js
+/atlas-tower-mkcd/highlight.js/highlight.pack.js
+/atlas-tower-mkcd/lzma/lzma_worker-min.js
+/atlas-tower-mkcd/fuse.min.js
+/atlas-tower-mkcd/jquery.js
+/atlas-tower-mkcd/pxtlib.js
+/atlas-tower-mkcd/pxtcompiler.js
+/atlas-tower-mkcd/pxtblocks.js
+/atlas-tower-mkcd/pxtwinrt.js
+/atlas-tower-mkcd/pxteditor.js
+/atlas-tower-mkcd/pxtsim.js
+/atlas-tower-mkcd/semantic.css
+/atlas-tower-mkcd/rtlsemantic.css
+/atlas-tower-mkcd/custom.css
+/atlas-tower-mkcd/icons.css
+
+
+
+
+# blockly
+/atlas-tower-mkcd/blockly/blockly_compressed.js
+/atlas-tower-mkcd/blockly/blocks_compressed.js
+/atlas-tower-mkcd/blockly/msg/js/en.js
+/atlas-tower-mkcd/blockly/media/sprites.png
+/atlas-tower-mkcd/blockly/media/click.mp3
+/atlas-tower-mkcd/blockly/media/disconnect.wav
+/atlas-tower-mkcd/blockly/media/delete.mp3
+
+# monaco; keep in sync with webapp/public/index.html
+/atlas-tower-mkcd/vs/loader.js
+/atlas-tower-mkcd/vs/base/worker/workerMain.js
+/atlas-tower-mkcd/vs/basic-languages/src/bat.js
+/atlas-tower-mkcd/vs/basic-languages/src/cpp.js
+/atlas-tower-mkcd/vs/editor/editor.main.css
+/atlas-tower-mkcd/vs/editor/editor.main.js
+/atlas-tower-mkcd/vs/editor/editor.main.nls.js
+/atlas-tower-mkcd/vs/language/json/jsonMode.js
+/atlas-tower-mkcd/vs/language/json/jsonWorker.js
+/atlas-tower-mkcd/vs/language/typescript/lib/typescriptServices.js
+/atlas-tower-mkcd/vs/language/typescript/src/mode.js
+/atlas-tower-mkcd/vs/language/typescript/src/worker.js
+
+# ai
+https://az416426.vo.msecnd.net/scripts/a/ai.0.js
+
+/atlas-tower-mkcd/worker.js
+/atlas-tower-mkcd/monacoworker.js
+
+# ver Fri Mar 02 2018 10:10:55 GMT-0700 (MST)
+
+/atlas-tower-mkcd/target.js
+  
+NETWORK:
+*
